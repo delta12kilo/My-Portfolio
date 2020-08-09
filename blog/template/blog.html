@@ -1,0 +1,159 @@
+{% load static %}
+
+<title>My Work</title>
+
+{% block content %}
+<style>
+    /* body{
+  margin: 0px; */
+  /* background: #121212; */
+/* } */
+#main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top:50%;
+  left:24%;
+  transform: rotate(-90deg) translate(-50%,-50%);
+}
+.line{
+  height: 2px;
+  width: 30px;
+  background: rgb(12, 11, 11);
+  margin-top: 50px;
+  position: absolute;
+  left:50%;
+  transform: translateX(-50%);
+  animation: anime 1s ease infinite;
+}
+.line::before{
+  content: '';
+  height: 10px;
+  width: 10px;
+  background: rgb(209,0,101);
+  border-radius: 50%;
+  position: absolute;
+  left:0%;
+  margin-top:-4px;
+}
+.line::after{
+  content: '';
+  height: 10px;
+  width: 10px;
+  background: rgb(209,0,101);
+  border-radius: 50%;
+  position: absolute;
+  left:100%;
+  margin-top:-4px;
+}
+.line1{
+  margin-top: 50px;
+  animation-delay: 0s;
+  animation-duration: 1s;
+}
+.line2{
+  margin-top: 80px;
+  animation-delay: 0.2s;
+  animation-duration: 1s;
+}
+.line3{
+  margin-top: 110px;
+  animation-delay: 0.3s;
+  animation-duration: 1s;
+}
+.line4{
+  margin-top: 140px;
+  animation-delay: 0.4s;
+  animation-duration: 1s;
+}
+.line5{
+  margin-top: 170px;
+  animation-delay: 0.5s;
+  animation-duration: 1s;
+}
+.line6{
+  margin-top: 200px;
+  animation-delay: 0.6s;
+  animation-duration: 1s;
+}
+.line7{
+  margin-top: 230px;
+  animation-delay: 0.7s;
+  animation-duration: 1s;
+}
+.line8{
+  margin-top: 260px;
+  animation-delay: 0.8s;
+  animation-duration: 1s;
+}
+@keyframes anime
+{
+  0%{
+    width:30px;
+  }
+  50%{
+    width:0px;
+  }
+  100%{
+    width: 30px;
+  }
+}
+
+@media(min-width: 800px){
+    #main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:50%;
+        left:46%;
+        transform: rotate(-90deg) translate(-50%,-50%);
+    }
+    .msg{
+  /*    font-family: 'Source Sans Pro', sans-serif; */
+  /*    font-size: 2em; */
+  /*    color:white; */
+        letter-spacing: 2px;
+        position: absolute;
+        top:60%;
+        left:24%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+}
+
+.msg{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 2em;
+  color:black;
+  letter-spacing: 2px;
+  position: absolute;
+  top:60%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+</style>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<script src="{% static 'js/particle.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/coming.css' %}">
+
+<div id="particles-js">
+<div id="main">
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <div class="line line3"></div>
+    <div class="line line4"></div>
+    <div class="line line5"></div>
+    <div class="line line6"></div>
+    <div class="line line7"></div>
+    <div class="line line8"></div>
+  </div>
+<div class="msg">coming soon</div>
+</div>
+
+
+
+
+{% endblock %}
