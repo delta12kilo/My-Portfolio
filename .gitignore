@@ -3,3 +3,6 @@ __pycache__
 db.sqlite3
 /static
 .DS_Store
+media
+demo
+card.html

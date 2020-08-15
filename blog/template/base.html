@@ -9,26 +9,28 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"> -->
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="{% static 'css/nav.css' %}">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:400,900|Source+Sans+Pro:300,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="../static/img/new1.png" type="image/x-icon">
 </head>
 <body>
     <header>
         <div class="logo">
-            <img src="../static/img/new1.png" alt="">
+            <img src="{% static '/img/new1.png' %}" alt="">
         </div>
 
         
         
         <div id="main">
-            <img src="../static/img/Menu%20Icon.png" alt="" id="icon"/>
+            <img src="{% static '/img/Menu%20Icon.png' %}" alt="" id="icon"/>
             <!-- <span class="hamburger"></span> -->
             <div id="menu" class="menu">
                 <ul>
-                <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="blog" class="nav__link">Blog</a></li>
+                <li class="nav__item"><a href="/" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="/blog" class="nav__link">Blog</a></li>
                 <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
                 <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                 </ul>
