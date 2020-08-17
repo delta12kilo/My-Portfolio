@@ -23,9 +23,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'smk6&2qzoy#w@9o@4_(dnv1!!ygu8%he&x)zi5cq3c3k=ftr@('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['frogman12.pythonanywhere.com']
+ALLOWED_HOSTS = ['http://frogman12.pythonanywhere.com/',
+                 '127.0.0.1']
 
 
 # Application definition
