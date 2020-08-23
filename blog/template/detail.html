@@ -1,9 +1,65 @@
 {% extends "base.html" %}
-{% block title %}{{ post.title }}{% endblock %}
+{% block title %}My Blog{% endblock %}
 {% block content %}
-<h1>{{ post.title }}</h1>
-<p class="date">
-Published {{ post.publish }} by {{ post.author }}
-</p>
-{{ post.body|linebreaks }}
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            margin:0;
+            font:normal 75% Arial, Helvetica, sans-serif;
+            }
+        canvas{
+            display: block;
+            /* vertical-align: bottom;  */
+            margin: -10em 0em 0em 0em;
+        }
+        #particles-js{
+            position:absolute;
+            width: 100%;
+            height: 90%;
+            background-color: #f3f0f0;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        .footer{
+        position: relative;
+        top:25.7em;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="particles-js">
+
+        <h1>
+            {{ post.title }}
+        </h1>
+        <p class="date">
+            Published {{ post.publish }} by {{ post.author }}
+            </p>
+            {{ post.body|linebreaks }}
+        </div>
+
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+    particlesJS("particles-js", {"particles":{"number":{"value":104,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":1,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.1025908125981518,"random":false,"anim":{"enable":false,"speed":0.7991497047141839,"opacity_min":0.1,"sync":false}},"size":{"value":7.8916009690886,"random":true,"anim":{"enable":true,"speed":4,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#221919","opacity":0.4,"width":1},"move":{"enable":true,"speed":0.6,"direction":"right","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":true,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"bubble"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+</script>
+
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
